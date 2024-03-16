@@ -39,11 +39,11 @@ python api-requests.py --api-file path/to/your/swagger.json --api-parameters "pa
 
 ## More Examples:
 
-### Authenticated
+### With Authentication
 ```
 python api_requests.py --api-file apis.json --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET --proxy http://localhost:8080 --max-connections 1 --api-parameters "id 1-100, productId 4, pageNo 1, itemsPerPage 1" --filter 400 --token-url https://example.com/OAuth/Token
 ```
-### Unauthenticated
+### Without Authentication
 ```
 python api-requests.py --api-file apis.json --proxy http://localhost:8080 --max-connections 1 --api-parameters "id 1-100, productId 4, pageNo 1, itemsPerPage 1" --filter 400,401
 ```
