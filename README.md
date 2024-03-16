@@ -14,12 +14,12 @@ pip install aiohttp
 ## Usage
 Basic usage of the script requires specifying the path to the Swagger JSON file with the --api-file argument. Additional options allow for customization of requests, including client authentication, proxy usage, and API parameterization.
 
-## Without Authentication
+### Without Authentication
 To run the script without authentication, simply omit the --client-id and --client-secret arguments.
 ```
 python api-requests.py --api-file path/to/your/swagger.json
 ```
-## With Authentication
+### With Authentication
 If the APIs require authentication, include the --client-id and --client-secret arguments, along with the optional --token-url for the authentication server.
 ```
 python api-requests.py --api-file path/to/your/swagger.json --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET --token-url YOUR_TOKEN_URL
@@ -30,7 +30,7 @@ Additional Options
 --max-connections: Set the maximum number of concurrent connections (default is 10).
 --filter-status: Provide a comma-separated list of HTTP status codes to ignore.
 
-## Example with Parameters
+### Example with Parameters
 Running the script with API parameters and filtering specific status codes:
 
 ```
@@ -39,11 +39,11 @@ python api-requests.py --api-file path/to/your/swagger.json --api-parameters "pa
 
 ## More Examples:
 
-Authenticated
+### Authenticated
 ```
 python api_requests.py --api-file apis.json --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET --proxy http://localhost:8080 --max-connections 1 --api-parameters "id 1-100, productId 4, pageNo 1, itemsPerPage 1" --filter 400 --token-url https://example.com/OAuth/Token
 ```
-Unauthenticated
+### Unauthenticated
 ```
 python api-requests.py --api-file apis.json --proxy http://localhost:8080 --max-connections 1 --api-parameters "id 1-100, productId 4, pageNo 1, itemsPerPage 1" --filter 400,401
 ```
