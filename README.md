@@ -17,12 +17,12 @@ Basic usage of the script requires specifying the path to the Swagger JSON file 
 Without Authentication
 To run the script without authentication, simply omit the --client-id and --client-secret arguments.
 ```
-python api_caller.py --api-file path/to/your/swagger.json
+python api-requests.py --api-file path/to/your/swagger.json
 ```
 With Authentication
 If the APIs require authentication, include the --client-id and --client-secret arguments, along with the optional --token-url for the authentication server.
 ```
-python api_caller.py --api-file path/to/your/swagger.json --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET --token-url YOUR_TOKEN_URL
+python api-requests.py --api-file path/to/your/swagger.json --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET --token-url YOUR_TOKEN_URL
 ```
 Additional Options
 --proxy: Specify a proxy server URL.
@@ -34,7 +34,7 @@ Additional Options
 Running the script with API parameters and filtering specific status codes:
 
 ```
-python api_caller.py --api-file path/to/your/swagger.json --api-parameters "page 1-3, size 10" --filter-status "404,500"
+python api-requests.py --api-file path/to/your/swagger.json --api-parameters "page 1-3, size 10" --filter-status "404,500"
 ```
 
 ## More Examples:
