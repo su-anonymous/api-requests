@@ -14,12 +14,12 @@ pip install aiohttp
 ## Usage
 Basic usage of the script requires specifying the path to the Swagger JSON file with the --api-file argument. Additional options allow for customization of requests, including client authentication, proxy usage, and API parameterization.
 
-Without Authentication
+## Without Authentication
 To run the script without authentication, simply omit the --client-id and --client-secret arguments.
 ```
 python api-requests.py --api-file path/to/your/swagger.json
 ```
-With Authentication
+## With Authentication
 If the APIs require authentication, include the --client-id and --client-secret arguments, along with the optional --token-url for the authentication server.
 ```
 python api-requests.py --api-file path/to/your/swagger.json --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET --token-url YOUR_TOKEN_URL
